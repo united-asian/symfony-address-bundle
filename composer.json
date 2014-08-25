@@ -14,11 +14,11 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "http://satis.united-asian.com/propel"
+            "url": "http://satis.united-asian.com/uam"
         }
     ],
     "require": {
-        "uam/propel-addressable-behavior": "dev-master"
+        "uam/propel-addressable-behavior": "*@dev"
     },
     "autoload": {
         "psr-0": { "UAM\\Bundle\\AddressBundle": "" }

@@ -12,7 +12,7 @@ address:
             label:      Région
         postal_code:
             label:      Code Postal
-        country:
+        country_id:
             label:      Pays
 
     actions:

@@ -1,0 +1,8 @@
+parameters:
+    uam_address.form.type.address.class: UAM\Bundle\AddressBundle\Form\Type\AddressType
+
+services:
+    uam_address.form.type.address:
+        class: %uam_address.form.type.address.class%
+        tags:
+            - { name: form.type, alias: uam_address }

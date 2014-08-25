@@ -2,24 +2,20 @@
 
 namespace UAM\Bundle\AddressBundle\Form\Type;
 
-use Propel\PropelBundle\Form\BaseAbstractType;
-
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class AddressFormType extends BaseAbstractType
+class AddressFormType extends AbstractType
 {
-    protected $options = array(
-        'data_class' => 'AddressableInterface',
-        'name' => 'address',
-    );
-
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'translation_domain' => 'address',
+            'translation_domain' => 'UAMAddressBundle',
+            'data_class' => 'AddressableInterface',
+            'name' => 'address',
         ));
     }
 
@@ -59,28 +55,15 @@ class AddressFormType extends BaseAbstractType
         ));
 
         $builder->add('country_id', 'choice' , array(
-            'label' => 'address.form.country.label',
+            'label' => 'address.form.country_id.label',
             'required' => false,
-            'attr' => array(
-                'class' => 'country'
-            ),
-            'empty_value' => 'Choose Country',
+            'empty_value' => '',
             'empty_data' => null
         ));
-
-        $builder->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $event) {
-            $map = $event->getData();
-            $form = $event->getForm();
-
-            $form->add('submit', 'submit', array(
-                'label' => $map->isNew() ? 'address.actions.save' : 'address.actions.Edit',
-            ));
-        });
-
     }
 
     public function getName()
     {
-        return 'address';
+        return 'uam_address';
     }
 }
