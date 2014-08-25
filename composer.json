@@ -1,0 +1,32 @@
+{
+    "name": "uam/address-bundle",
+    "description": "Address bundle",
+    "keywords": ["symfony2", "symfony", "bundle", "address", "UAMAddressBundle"],
+    "homepage": "http://gitlab.united-asian.com/uam-private/UAMAddressBundle",
+    "type": "symfony-bundle",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Olivier Pichon",
+            "email": "op@united-asian.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://satis.united-asian.com/propel"
+        }
+    ],
+    "require": {
+        "uam/propel-addressable-behavior": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "UAM\\Bundle\\AddressBundle": "" }
+    },
+    "target-dir": "UAM/Bundle/AddressBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master" : "0.1.x-dev"
+        }
+    }
+}

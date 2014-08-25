@@ -1,0 +1,3 @@
+uam_address_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: UAMAddressBundle:Default:index }
