@@ -24,11 +24,6 @@ class AddressFormType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name', 'text' , array(
-            'label' => 'address.form.name.label',
-            'required' => true,
-        ));
-
         $builder->add('street', 'text' , array(
             'label' => 'address.form.street.label',
             'required' => true,
@@ -54,7 +49,7 @@ class AddressFormType extends AbstractType
             'required' => true,
         ));
 
-        $builder->add('country_id', 'choice' , array(
+        $builder->add('country_id', 'country' , array(
             'label' => 'address.form.country_id.label',
             'required' => false,
             'empty_value' => '',
