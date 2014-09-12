@@ -17,11 +17,13 @@ class AddressExtension extends Twig_Extension
 
     public function format($address, $format = null, $locale = null)
     {
+        $street = $address->getStreet();
         $city = $address->getLocality();
         $state = $address->getRegion();
         $zip = $address->getPostalCode();
+        $country = $address->getCountryId();
 
-        $formatted_address = $city . ' ' . $state . ' ' . $zip;
+        $formatted_address = $street . ' ' . $city . ' ' . $state . ' ' . $zip . ' ' . $country;
 
         return $formatted_address;
     }
