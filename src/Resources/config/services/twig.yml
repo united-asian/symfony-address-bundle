@@ -1,0 +1,5 @@
+services:
+    twig.extension.address:
+        class: UAM\Bundle\AddressBundle\Twig\Extension\AddressExtension
+        tags:
+            - { name: twig.extension }
