@@ -14,7 +14,7 @@ class AddressFormType extends AbstractType
     {
         $resolver->setDefaults(array(
             'translation_domain' => 'UAMAddressBundle',
-            'data_class' => 'AddressableInterface',
+            'data_class' => 'UAM\Propel\Behavior\AddressableInterface',
             'name' => 'address',
         ));
     }
