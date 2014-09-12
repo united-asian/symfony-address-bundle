@@ -23,7 +23,7 @@ class AddressExtension extends Twig_Extension
         $zip = $address->getPostalCode();
         $country = $address->getCountryId();
 
-        $formatted_address = $street . ' ' . $city . ' ' . $state . ' ' . $zip . ' ' . $country;
+        $formatted_address = $street . ', ' . $city . ', ' . $state . ', ' . $zip . ', ' . $country;
 
         return $formatted_address;
     }
